@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es" data-lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evertome · WoW Forever</title>
+  <meta name="description" content="Evertome: addon para World of Warcraft: Forever. Cambios de objetos respecto a Classic, recomendaciones por clase, mejoras, BiS calculado y diario de mazmorras con datos de la comunidad.">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/main.js" defer></script>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#top"><img src="assets/icon.png" alt="" width="28" height="28"> Evertome</a>
+  <nav>
+    <a href="#features"><span lang="es">Funciones</span><span lang="en">Features</span></a>
+    <a href="#sync">Sync</a>
+    <a href="#commands"><span lang="es">Comandos</span><span lang="en">Commands</span></a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <button class="lang" type="button" aria-label="Idioma / Language"><span lang="es">EN</span><span lang="en">ES</span></button>
+</header>
+
+<main id="top">
+
+  <!-- Portada -->
+  <section class="hero">
+    <img class="hero-icon" src="assets/icon.png" alt="Evertome" width="160" height="160">
+    <div>
+      <h1>Evertome</h1>
+      <p class="tagline">
+        <span lang="es">El compañero para <strong>World of Warcraft: Forever</strong>. Descubre qué ha cambiado respecto a Classic, qué te sirve y qué deja cada jefe.</span>
+        <span lang="en">The companion for <strong>World of Warcraft: Forever</strong>. See what changed from Classic, what suits you and what every boss drops.</span>
+      </p>
+      <div class="actions">
+        <span class="btn disabled" title="Próximamente / Coming soon">
+          <span lang="es">Descarga: próximamente en CurseForge</span><span lang="en">Download: coming soon on CurseForge</span>
+        </span>
+        <a class="btn ghost" href="#sync"><span lang="es">Cómo funciona Evertome Sync</span><span lang="en">How Evertome Sync works</span></a>
+      </div>
+      <p class="note">
+        <span lang="es">En desarrollo durante la beta de WoW Forever. Todas las clases y especializaciones, PvE y PvP. Inglés y español.</span>
+        <span lang="en">In development during the WoW Forever beta. Every class and spec, PvE and PvP. English and Spanish.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Funciones -->
+  <section id="features">
+    <h2><span lang="es">Funciones</span><span lang="en">Features</span></h2>
+
+    <div class="split">
+      <div>
+        <p class="lead">
+          <span lang="es">Forever cambia la itemización de Classic: objetos nuevos, stats distintos y nuevas mazmorras. Evertome lo muestra donde lo necesitas, en el propio tooltip.</span>
+          <span lang="en">Forever reworks Classic itemization: new items, different stats and new dungeons. Evertome shows it where you need it, right in the tooltip.</span>
+        </p>
+        <ul class="checks">
+          <li><span lang="es"><b>Nuevo / cambiado / igual</b> que en Classic Era, con el detalle stat a stat.</span><span lang="en"><b>New / changed / unchanged</b> compared to Classic Era, stat by stat.</span></li>
+          <li><span lang="es"><b>Para quién es:</b> especializaciones de tu clase para las que se recomienda.</span><span lang="en"><b>Who it's for:</b> the specs of your class it is recommended for.</span></li>
+          <li><span lang="es"><b>¿Es mejora?</b> Puntuación con pesos por clase y rol, y diferencia con lo equipado.</span><span lang="en"><b>Is it an upgrade?</b> Score with weights per class and role, and the difference with what you wear.</span></li>
+        </ul>
+      </div>
+      <figure class="tooltip" aria-label="Ilustración de un tooltip">
+        <div class="tt-name">Objeto de ejemplo</div>
+        <div class="tt-line">Binds when equipped</div>
+        <div class="tt-line">Wrist <span class="tt-right">Leather</span></div>
+        <div class="tt-line">+4 Agility</div>
+        <div class="tt-line">+3 Stamina</div>
+        <div class="tt-sep"></div>
+        <div class="tt-et">Evertome: <span class="tt-chg">changed vs Classic</span></div>
+        <div class="tt-line tt-dim">  Agility 3 → 4 · Stamina 4 → 3</div>
+        <div class="tt-et">Recommended: <span class="tt-ok">Feral, Combat</span></div>
+        <div class="tt-et">Upgrade: <span class="tt-ok">+6.2</span> <span class="tt-dim">(Feral tank)</span></div>
+        <figcaption><span lang="es">Ilustración: el formato real puede variar.</span><span lang="en">Illustration: the actual format may vary.</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <h3><span lang="es">Ventana de equipo</span><span lang="en">Gear window</span></h3>
+        <p><span lang="es">Con <code>/et</code> o el botón del minimapa: vista de personaje con modelo 3D, prueba de objetos sin equiparlos, panel de stats con los totales reales y los mejores objetos por ranura.</span>
+           <span lang="en">With <code>/et</code> or the minimap button: character view with 3D model, try items on without equipping them, stats panel with your real totals and the best items per slot.</span></p>
+      </article>
+      <article class="card">
+        <h3><span lang="es">BiS calculado</span><span lang="en">Calculated BiS</span></h3>
+        <p><span lang="es">El addon calcula el mejor objeto por ranura para cada clase y especialización a partir de unos 11 000 candidatos del cliente. Alterna entre <i>Listas</i> y <i>Calculado</i>.</span>
+           <span lang="en">The addon computes the best item per slot for every class and spec from about 11,000 candidates in the client. Switch between <i>Lists</i> and <i>Calculated</i>.</span></p>
+      </article>
+      <article class="card">
+        <h3><span lang="es">PvE y PvP</span><span lang="en">PvE and PvP</span></h3>
+        <p><span lang="es">Pesos de stats por rol para las 9 clases, con variantes JcJ. El rol se detecta por tus talentos o se elige a mano.</span>
+           <span lang="en">Stat weights per role for all 9 classes, with PvP variants. The role is detected from your talents or chosen manually.</span></p>
+      </article>
+      <article class="card wip">
+        <h3><span lang="es">Diario de mazmorras</span><span lang="en">Dungeon journal</span> <span class="badge"><span lang="es">en desarrollo</span><span lang="en">in progress</span></span></h3>
+        <p><span lang="es">Las 24 mazmorras de Forever con sus 208 jefes y las misiones de mazmorra. El botín y sus probabilidades llegarán con los datos de la comunidad (ver Evertome Sync).</span>
+           <span lang="en">All 24 Forever dungeons with their 208 bosses and dungeon quests. Loot and drop chances will come from community data (see Evertome Sync).</span></p>
+      </article>
+      <article class="card">
+        <h3><span lang="es">Botón del minimapa</span><span lang="en">Minimap button</span></h3>
+        <p><span lang="es">Compatible con MinimapButtonButton, Titan Panel, ChocolateBar y cualquier display LibDataBroker. Se puede ocultar.</span>
+           <span lang="en">Works with MinimapButtonButton, Titan Panel, ChocolateBar and any LibDataBroker display. Can be hidden.</span></p>
+      </article>
+      <article class="card">
+        <h3><span lang="es">Ligero y modular</span><span lang="en">Light and modular</span></h3>
+        <p><span lang="es">Cada función es un módulo que puedes desactivar. <code>/et perf</code> muestra la memoria y la CPU que usa el addon.</span>
+           <span lang="en">Every feature is a module you can turn off. <code>/et perf</code> shows the memory and CPU the addon uses.</span></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Evertome Sync -->
+  <section id="sync" class="band">
+    <h2>Evertome Sync</h2>
+    <p class="lead">
+      <span lang="es">El botín, las probabilidades, los textos de misión y los datos de los PNJ no están en el cliente del juego: los tiene el servidor. La única forma de conocerlos es observarlos. Evertome Sync junta lo que observan muchos jugadores para construir una base de datos abierta de WoW Forever.</span>
+      <span lang="en">Loot, drop chances, quest texts and NPC data are not in the game client: the server holds them. The only way to know them is to observe them. Evertome Sync pools what many players observe to build an open WoW Forever database.</span>
+    </p>
+
+    <ol class="flow">
+      <li>
+        <b><span lang="es">1. Juegas</span><span lang="en">1. You play</span></b>
+        <span lang="es">El addon anota lo que observas: muertes con su botín, jefes, criaturas, entradas y misiones.</span>
+        <span lang="en">The addon notes what you observe: kills and their loot, bosses, creatures, entrances and quests.</span>
+      </li>
+      <li>
+        <b><span lang="es">2. Se guarda</span><span lang="en">2. It's saved</span></b>
+        <span lang="es">Un addon no puede conectarse a internet: los datos se quedan en tus SavedVariables.</span>
+        <span lang="en">An addon cannot reach the internet: the data stays in your SavedVariables.</span>
+      </li>
+      <li>
+        <b><span lang="es">3. Se envía</span><span lang="en">3. It's sent</span></b>
+        <span lang="es">Al cerrar el juego, el acompañante Evertome Sync (Windows) envía solo lo nuevo, con un identificador anónimo.</span>
+        <span lang="en">When you close the game, the Evertome Sync companion (Windows) sends only what's new, with an anonymous ID.</span>
+      </li>
+      <li>
+        <b><span lang="es">4. Se comparte</span><span lang="en">4. It's shared</span></b>
+        <span lang="es">El servidor combina lo de todos; solo se publica lo que confirman varios jugadores. El resultado son datos abiertos incluidos en cada versión del addon.</span>
+        <span lang="en">The server combines everyone's data; only what several players confirm is published. The result is open data shipped with every addon release.</span>
+      </li>
+    </ol>
+
+    <div class="split">
+      <div>
+        <h3><span lang="es">Qué se envía</span><span lang="en">What is sent</span></h3>
+        <table class="data">
+          <thead><tr><th><span lang="es">Evento</span><span lang="en">Event</span></th><th><span lang="es">Contenido</span><span lang="en">Contents</span></th></tr></thead>
+          <tbody>
+            <tr><td><code>kill</code></td><td><span lang="es">mazmorra, criatura y objetos que dejó</span><span lang="en">dungeon, creature and the items it dropped</span></td></tr>
+            <tr><td><code>boss</code></td><td><span lang="es">jefe y encuentro</span><span lang="en">boss and encounter</span></td></tr>
+            <tr><td><code>creature</code></td><td><span lang="es">criatura (PNJ): nombre, nivel, clasificación, vida</span><span lang="en">creature (NPC): name, level, classification, health</span></td></tr>
+            <tr><td><code>entrance</code></td><td><span lang="es">posición de la entrada de una mazmorra</span><span lang="en">position of a dungeon entrance</span></td></tr>
+            <tr><td><code>quest</code></td><td><span lang="es">misión: título, nivel y mazmorra</span><span lang="en">quest: title, level and dungeon</span></td></tr>
+            <tr><td><code>questvote</code></td><td><span lang="es">tu corrección al asignar una misión a una mazmorra</span><span lang="en">your correction when assigning a quest to a dungeon</span></td></tr>
+          </tbody>
+        </table>
+        <p class="small"><span lang="es">Cada evento lleva además la versión del juego, el idioma del cliente y la hora.</span><span lang="en">Every event also carries the game version, client language and time.</span></p>
+
+        <h3><span lang="es">Qué no se envía nunca</span><span lang="en">What is never sent</span></h3>
+        <ul class="crosses">
+          <li><span lang="es">Nombres de personajes, reino o cuenta.</span><span lang="en">Character, realm or account names.</span></li>
+          <li><span lang="es">Chat, amigos, hermandad u otros jugadores.</span><span lang="en">Chat, friends, guild or other players.</span></li>
+          <li><span lang="es">Datos de otras versiones de WoW: solo WoW Forever (cliente 1.60.*).</span><span lang="en">Data from other WoW versions: WoW Forever only (client 1.60.*).</span></li>
+        </ul>
+      </div>
+      <figure class="shot">
+        <img src="assets/sync-window.png" alt="Ventana de Evertome Sync" width="620" height="520" loading="lazy">
+        <figcaption><span lang="es">El acompañante: estado, ficheros detectados y eventos pendientes. Puedes excluir cualquier fichero.</span><span lang="en">The companion: status, detected files and pending events. You can exclude any file.</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="cards three">
+      <article class="card">
+        <h3><span lang="es">Sin secretos</span><span lang="en">No secrets</span></h3>
+        <p><span lang="es">El acompañante no lleva contraseñas ni claves: el servidor solo acepta envíos válidos y limita cuántos llegan de cada instalación.</span><span lang="en">The companion carries no passwords or keys: the server only accepts valid submissions and rate-limits each install.</span></p>
+      </article>
+      <article class="card">
+        <h3><span lang="es">Sin instalar nada más</span><span lang="en">Nothing else to install</span></h3>
+        <p><span lang="es">Un único <code>.exe</code> que se queda en la bandeja y envía al cerrar WoW. Puede iniciarse con Windows.</span><span lang="en">A single <code>.exe</code> that sits in the tray and sends when WoW closes. It can start with Windows.</span></p>
+      </article>
+      <article class="card">
+        <h3><span lang="es">Tú decides</span><span lang="en">Your choice</span></h3>
+        <p><span lang="es">El registro se desactiva en <i>Opciones › Accesorios › Evertome</i>. Sin el acompañante no sale nada de tu equipo.</span><span lang="en">Recording can be turned off in <i>Options › AddOns › Evertome</i>. Without the companion nothing leaves your PC.</span></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Comandos -->
+  <section id="commands">
+    <h2><span lang="es">Comandos</span><span lang="en">Commands</span></h2>
+    <p><span lang="es"><code>/et</code> o <code>/evertome</code>. Muchos tienen alias en español (<code>/et opciones</code>, <code>/et clase</code>...).</span><span lang="en"><code>/et</code> or <code>/evertome</code>.</span></p>
+    <table class="data commands">
+      <tbody>
+        <tr><td><code>/et</code></td><td><span lang="es">abre la ventana</span><span lang="en">open the window</span></td></tr>
+        <tr><td><code>/et options</code></td><td><span lang="es">panel de opciones</span><span lang="en">options panel</span></td></tr>
+        <tr><td><code>/et class &lt;auto|clase&gt;</code></td><td><span lang="es">clase en la que se centran los tooltips</span><span lang="en">class the tooltips focus on</span></td></tr>
+        <tr><td><code>/et role &lt;auto|rol&gt;</code></td><td><span lang="es">rol para la puntuación de mejoras</span><span lang="en">role used for the upgrade score</span></td></tr>
+        <tr><td><code>/et minimap</code></td><td><span lang="es">muestra u oculta el botón del minimapa</span><span lang="en">show/hide the minimap button</span></td></tr>
+        <tr><td><code>/et modules</code> · <code>/et toggle &lt;módulo&gt;</code></td><td><span lang="es">lista y activa/desactiva módulos</span><span lang="en">list and enable/disable modules</span></td></tr>
+        <tr><td><code>/et questlog</code></td><td><span lang="es">tus misiones con sus ID</span><span lang="en">your quests with their IDs</span></td></tr>
+        <tr><td><code>/et sync</code></td><td><span lang="es">datos de la comunidad y Evertome Sync</span><span lang="en">community data and Evertome Sync</span></td></tr>
+        <tr><td><code>/et perf</code></td><td><span lang="es">consumo de recursos del addon</span><span lang="en">addon resource usage</span></td></tr>
+        <tr><td><code>/et info</code> · <code>/et stats &lt;objeto&gt;</code></td><td><span lang="es">versión del cliente y stats en bruto (depuración)</span><span lang="en">client version and raw stats (debug)</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Preguntas -->
+  <section id="faq">
+    <h2><span lang="es">Preguntas frecuentes</span><span lang="en">FAQ</span></h2>
+    <details>
+      <summary><span lang="es">¿Necesito Evertome Sync para usar el addon?</span><span lang="en">Do I need Evertome Sync to use the addon?</span></summary>
+      <p><span lang="es">No. El addon funciona solo. El acompañante es opcional y sirve para aportar tus observaciones a la base de datos común.</span><span lang="en">No. The addon works on its own. The companion is optional and lets you contribute your observations to the shared database.</span></p>
+    </details>
+    <details>
+      <summary><span lang="es">¿Por qué hace falta un programa aparte?</span><span lang="en">Why a separate program?</span></summary>
+      <p><span lang="es">Por diseño, los addons de WoW no pueden conectarse a internet ni escribir ficheros fuera de sus SavedVariables. El acompañante solo lee ese fichero y envía lo nuevo.</span><span lang="en">By design, WoW addons cannot reach the internet or write files outside their SavedVariables. The companion only reads that file and sends what's new.</span></p>
+    </details>
+    <details>
+      <summary><span lang="es">¿Funciona en Classic Era u otras versiones?</span><span lang="en">Does it work in Classic Era or other versions?</span></summary>
+      <p><span lang="es">Evertome está hecho para WoW Forever. Fuera de Forever no se registra ni se envía nada.</span><span lang="en">Evertome is built for WoW Forever. Outside Forever nothing is recorded or sent.</span></p>
+    </details>
+    <details>
+      <summary><span lang="es">¿Los pesos de stats y el BiS son exactos?</span><span lang="en">Are stat weights and BiS exact?</span></summary>
+      <p><span lang="es">Son estimaciones que se irán afinando durante la beta. Úsalos como orientación.</span><span lang="en">They are estimates that will be refined during the beta. Use them as guidance.</span></p>
+    </details>
+    <details>
+      <summary><span lang="es">¿Puedo ayudar?</span><span lang="en">Can I help?</span></summary>
+      <p><span lang="es">Sí: usando Evertome Sync, informando de errores o traduciendo el addon a tu idioma.</span><span lang="en">Yes: by running Evertome Sync, reporting bugs or translating the addon into your language.</span></p>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <p><span lang="es">Evertome es un proyecto de fans, sin relación con Blizzard Entertainment. World of Warcraft es una marca de Blizzard Entertainment, Inc.</span><span lang="en">Evertome is a fan project, not affiliated with Blizzard Entertainment. World of Warcraft is a trademark of Blizzard Entertainment, Inc.</span></p>
+  <p><span lang="es">Datos de juego: <a href="https://wago.tools">wago.tools</a>. Licencia MIT.</span><span lang="en">Game data: <a href="https://wago.tools">wago.tools</a>. MIT license.</span></p>
+</footer>
+
+</body>
+</html>
